@@ -6,7 +6,6 @@ import { Component, ViewChild, TemplateRef } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fn-tab';
 
   @ViewChild('tabDataTemplateRef') tabDataTemplateRef: TemplateRef<HTMLElement>;
   tabArray = [
