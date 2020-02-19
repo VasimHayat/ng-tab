@@ -1,4 +1,4 @@
-import { Component, Input, TemplateRef } from '@angular/core';
+import { Component, Input, TemplateRef, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgTabModel } from './ng-tab.model';
 
 @Component({
@@ -6,9 +6,17 @@ import { NgTabModel } from './ng-tab.model';
     templateUrl: 'ng-tab.component.html',
     styleUrls: ['ng-tab.component.scss']
 })
-export class NgTabComponent {
+export class NgTabComponent implements OnInit {
+
 
     @Input() tabArray: Array<NgTabModel> = [];
     @Input() dataTemplate: TemplateRef<HTMLElement>;
+    @Input() isVertical: boolean;
 
+    tabClass = '';
+
+    ngOnInit(): void {
+        this.tabClass = this.isVertical ? 'verticalTab' : '';
+        console.log(this.tabClass)
+    }
 }

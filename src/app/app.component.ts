@@ -7,6 +7,7 @@ import { Component, ViewChild, TemplateRef } from '@angular/core';
 })
 export class AppComponent {
 
+  isVertical = true;
   @ViewChild('tabDataTemplateRef') tabDataTemplateRef: TemplateRef<HTMLElement>;
   tabArray = [
 
