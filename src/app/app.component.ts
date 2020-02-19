@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
   title = 'fn-tab';
 
-  @ViewChild('tabDataTemplateRef') tabDataTemplateRef;
+  @ViewChild('tabDataTemplateRef') tabDataTemplateRef: TemplateRef<HTMLElement>;
   tabArray = [
 
     {
