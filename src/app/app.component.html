@@ -1,0 +1,16 @@
+ <ng-tab [tabArray]="tabArray" [dataTemplate]="tabDataTemplateRef"></ng-tab>
+
+ <ng-template #tabDataTemplateRef let-config>
+   <div [hidden]="config.templateId != 'data_1'">
+     One
+   </div>
+   <div [hidden]="config.templateId != 'data_2'">
+     TWO
+   </div>
+   <div [hidden]="config.templateId != 'data_3'">
+     Three
+   </div>
+   <div [hidden]="config.templateId != 'data_4'">
+     Four
+   </div>
+ </ng-template>

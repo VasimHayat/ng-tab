@@ -1,0 +1,6 @@
+<mat-tab-group>
+  <mat-tab label="{{config.titile}}" *ngFor="let config of tabArray">
+    <ng-container [ngTemplateOutlet]="dataTemplate" [ngTemplateOutletContext]="{  $implicit: config }">
+    </ng-container>
+  </mat-tab>
+</mat-tab-group>
